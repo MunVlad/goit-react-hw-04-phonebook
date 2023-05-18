@@ -7,7 +7,7 @@ import Filter from './Filter';
 import Notification from './Notification';
 
 export default function App() {
-  const [contacts, setContacts] = useState(
+  const [contacts, setContacts] = useState(() =>
     JSON.parse(localStorage.getItem('contacts')) ?? []
   );
   const [filter, setFilter] = useState('');
